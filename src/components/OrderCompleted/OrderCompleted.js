@@ -1,7 +1,5 @@
-import { useLocation } from 'react-router';
 import React from 'react';
-import Header from '../Header/Header';
-import Footer from '../Footer/Footer';
+import { useLocation } from 'react-router';
 import './OrderCompleted.css';
 
 const OrderCompleted = () => {
@@ -9,15 +7,11 @@ const OrderCompleted = () => {
     const data = location.state;
 
     return (
-        <>
-            <Header />
-            <div className="order-completed-wrapper">
-                <h1 className="order-completed_title">Thanks for ordering</h1>
-                <p className="order-completed_date">Order date: { data?.date }</p>
-                <p className="order-completed_id">Order id: { data?.orderId }</p>
-            </div>
-            <Footer />
-        </>
+        <div className="order-completed-wrapper">
+            <h1 className="order-completed_title">Thanks for ordering</h1>
+            <p className="order-completed_date">Order date: { data?.date || 'N/A'}</p>
+            <p className="order-completed_id">Order id: { data?.orderId || 'N/A'}</p>
+        </div>
     )
 }
 

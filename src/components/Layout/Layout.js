@@ -1,16 +1,17 @@
 import React from 'react';
 import Footer from '../Footer/Footer'
 import Header from '../Header/Header'
-import Main from '../Main/Main'
 import SidebarCart from '../SidebarCart/SidebarCart'
 
-export const Layout = () => {
+const Layout = ({ children }) => {
     return (
         <>
             <Header />
-            <Main />
+            { children }
             <SidebarCart />
             <Footer />
         </>
     )
 }
+
+export default Layout;

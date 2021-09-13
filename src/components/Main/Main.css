@@ -38,7 +38,6 @@
 
     .main-description {
         margin: 25px auto;
-        /* width: 500px; */
     }
 }
 
@@ -48,9 +47,10 @@
     }
     .main-description {
         font-size: 15px;
+        min-width: 250px;
     }
     .main-wrapper-product-container {
         min-width: 250px;
-        padding-left: 50px;
+        padding-left: 25px;
     }
 }

@@ -7,16 +7,15 @@ import { PersistGate } from 'redux-persist/integration/react'
 import { Provider } from 'react-redux';
 import { initStore } from './store';
 
-// import Header from './components/Header/Header';
-// import Main from './components/Main/Main';
-// import SidebarCart from './components/SidebarCart/SidebarCart';
-// import Footer from './components/Footer/Footer';
-
 import { ModalStateProvider } from './hooks/useModalState';
+
+import Layout from './components/Layout/Layout';
+import Main from './components/Main/Main';
 import OrderCompleted from './components/OrderCompleted/OrderCompleted';
 
+import PublicRoute from './routes/publicRoute';
+
 import history from './history/history';
-import { Layout } from './components/Layout/Layout';
 
 const store = initStore();
 
@@ -26,8 +25,8 @@ ReactDOM.render(
             <ModalStateProvider>
                 <Router history={history}>
                     <Switch>
-                        <Route path="/order-completed" exact component={OrderCompleted} />
-                        <Route path="/" component={Layout} />
+                        <PublicRoute path="/order-completed" exact layout={Layout} component={OrderCompleted} />
+                        <PublicRoute path="/" layout={Layout} component={Main} />
                         <Route render={() => <h1>Not Found</h1>} />
                     </Switch>
                 </Router>
