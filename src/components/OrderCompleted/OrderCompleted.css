@@ -1,0 +1,15 @@
+.order-completed-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 70vh;
+    text-align: center;
+}
+
+.order-completed_title {
+    font-size: 70px;
+}
+.order-completed_date, .order-completed_id{
+    font-size: 20px;
+    font-weight: normal;
+}

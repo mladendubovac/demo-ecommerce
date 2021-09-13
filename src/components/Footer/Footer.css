@@ -1,0 +1,12 @@
+.footer {
+    margin: 25px 75px;
+    padding: 25px;
+}
+
+@media only screen and (max-width: 768px) {
+    .footer {
+        margin: 0 auto;
+        text-align: center;
+    }
+}
+
