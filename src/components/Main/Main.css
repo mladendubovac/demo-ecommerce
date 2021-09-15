@@ -1,13 +1,13 @@
 .main {
 	display: flex;
     min-height: 70vh;
-	margin: 25px 75px;
+	margin: 25px 0 25px 75px;
 }
 
 .main-wrapper {
 	padding: 10px;
 	margin-right: 75px;
-    max-width: 450px;
+    max-width: 500px;
 }
 
 .main-title {
@@ -25,15 +25,16 @@
     z-index: 0;
 }
 
-
 @media only screen and (max-width: 1280px) {
     .main {
         flex-direction: column;
+    	margin: auto 0;
     }
 
     .main-wrapper {
         max-width: 100%;
         text-align: center;
+    	margin-right: 0;
     }
 
     .main-description {
@@ -51,6 +52,6 @@
     }
     .main-wrapper-product-container {
         min-width: 250px;
-        padding-left: 25px;
+        padding: 0 25px;
     }
 }
